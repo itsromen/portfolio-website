@@ -20,7 +20,11 @@ function NavBar() {
       </ul>
 
       <button className="md:hidden" onClick={() => setIsOpen(true)}>
-        <img src="menu.svg" alt="Menu Button" className="w-10" />
+        <img
+          src="menu.svg"
+          alt="Menu Button"
+          className="w-10 invert dark:invert-0"
+        />
       </button>
 
       <div
