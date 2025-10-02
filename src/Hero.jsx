@@ -1,8 +1,9 @@
+import Button from "./Button";
 import NavBar from "./NavBar";
 
 function Hero() {
   return (
-    <header className="relative lg:h-dvh flex flex-col bg-[#222831] text-[#EEEEEE] overflow-clip ">
+    <header className="snap-start relative lg:h-dvh flex flex-col bg-[#222831] text-[#EEEEEE] overflow-clip ">
       <NavBar />
       <div>
         <div className="min-lg:max-[1800px]:block hidden border absolute border-[#EEEEEE1A] left-[406px] min-[1384px]:left-[484px] h-screen bottom-0" />
@@ -23,12 +24,10 @@ function Hero() {
               CREATIVE UI <span className="text-[#00ADB5]">DESIGNER</span>
             </h1>
             <div className="justify-center sm:justify-start flex gap-6">
-              <button className="bg-[#00ADB5] py-2.5 px-8 rounded-3xl font-bold">
-                Hire Me
-              </button>
-              <button className="flex gap-2.5 bg-[#393E46BF]/75 py-2.5 px-8 rounded-3xl font-bold">
+              <Button>Hire Me</Button>
+              <Button hasImg={true} bgCyan={false}>
                 Download CV <img src="download.svg" alt="Download icon" />
-              </button>
+              </Button>
             </div>
           </div>
           <div className="hidden w-18 h-18 min-[1384px]:w-24 min-[1384px]:h-24 bg-[#393E46BF] min-md:max-lg:grid min-[1800px]:grid place-items-center absolute max-lg:right-24 max-lg:top-55 lg:bottom-8 min-lg:max-[1384px]:left-[371px] min-[1384px]:bottom-16 min-[1384px]:left-[437px]">
