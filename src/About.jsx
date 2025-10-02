@@ -14,15 +14,14 @@ function About() {
 
   useEffect(() => {
     checkClamp();
-
     window.addEventListener("resize", checkClamp);
     return () => window.removeEventListener("resize", checkClamp);
   }, []);
 
   return (
-    <div className="bg-[#222831] py-36 min-[1130px]:py-0 grid place-content-center overflow-clip relative">
+    <div className="bg-[#f5f5f5] dark:bg-[#222831] py-36 min-[1130px]:py-0 grid place-content-center overflow-clip relative">
       <section className="snap-start relative min-h-screen grid min-[1130px]:grid-cols-5 place-items-center max-w-[1800px]">
-        <div className="hidden min-[1130px]:block border absolute border-[#EEEEEE1A] left-[406px] min-[1384px]:left-[484px] inset-y-0" />
+        <div className="hidden min-[1130px]:block border absolute border-[#22283133] dark:border-[#eeeeee33] left-[406px] min-[1384px]:left-[484px] inset-y-0" />
 
         <div className="col-span-2 max-[472px]:px-12 px-28 max-[472px]:mb-12 mb-24 relative">
           <img
@@ -41,17 +40,17 @@ function About() {
             className="absolute -bottom-64 right-24 hidden min-[1130px]:inline"
           />
 
-          <h2 className="max-[580px]:text-center text-[#EEEEEE] max-[472px]:text-4xl text-6xl font-bold mb-6">
-            About <span className="text-[#00ADB5]">me</span>
+          <h2 className="max-[580px]:text-center text-[#222831] dark:text-[#eeeeee] max-[472px]:text-4xl text-6xl font-bold mb-6">
+            About <span className="text-[#00adb5]">me</span>
           </h2>
 
           <p
             ref={textRef}
-            className={`max-[580px]:text-center max-[472px]:text-sm text-lg text-[#EEEEEEBF] ${
+            className={`max-[580px]:text-center max-[472px]:text-sm text-lg text-[#393e46] dark:text-[#eeeeeecc] ${
               expanded ? "" : "line-clamp-7"
             }`}
           >
-            Hi, I'm <span className="text-[#00ADB5]">Romen</span>, a frontend
+            Hi, I'm <span className="text-[#00adb5]">Romen</span>, a frontend
             enthusiast who thrives on crafting clean, responsive interfaces. I
             love turning ideas into interactive experiences using HTML, CSS, and
             JavaScript. Lately, I've been diving into the world of React and
@@ -64,7 +63,7 @@ function About() {
           {(isClamped || expanded) && (
             <button
               onClick={() => setExpanded(!expanded)}
-              className="mt-2 text-[#00ADB5] hover:underline"
+              className="mt-2 text-[#00adb5] hover:underline"
             >
               {expanded ? "Show less" : "Read more"}
             </button>
@@ -75,7 +74,8 @@ function About() {
           <img src="about-image.svg" alt="Cool doodles" />
         </div>
       </section>
-      <div className="absolute inset-x-0 bottom-20 border-t border-[#EEEEEE1A]" />
+
+      <div className="absolute inset-x-0 bottom-20 border-t border-[#22283133] dark:border-[#eeeeee33]" />
     </div>
   );
 }

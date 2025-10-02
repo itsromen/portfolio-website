@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bgDark: #222831;
+  --color-bgLight: #eeeeee;
+  --color-textDark: #eeeeee;
+  --color-textLight: #222831;
+  --color-accent: #00adb5;
+  --color-btnSecondaryDark: #393e46bf;
+  --color-btnSecondaryLight: #e0e0e0bf;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
